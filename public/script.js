@@ -13,11 +13,14 @@ var peer = new Peer(undefined, {
     port: '5000'
 })
 
+var myvideostream;
+
 navigator.mediaDevices.getUserMedia({
     audio: true,
     video: true
 }).then(stream => {
-    addvideostream(myvideo, stream);
+    myvideostream=stream;
+    addvideostream(myvideo, myvideostream);
 
     peer.on('call', call => {
         call.answer(stream)
@@ -79,4 +82,46 @@ socket.on('createmsg', (m, un) => {
 
 const scrolltobottom = () =>{
     $('.chat-main').scrollTop($('.chat-main').prop("scrollHeight"));
+}
+
+const AudioBtn = () =>{
+    const enabled = myvideostream.getAudioTracks()[0].enabled;
+    if(enabled){
+        myvideostream.getAudioTracks()[0].enabled = false;
+        unmuteAudio();
+    }
+    else{
+        muteAudio();
+        myvideostream.getAudioTracks()[0].enabled = true;
+    }
+}
+
+const unmuteAudio = () =>{
+    document.getElementById('btn-audio-off').style.display="block";
+    document.getElementById('btn-audio-on').style.display="none";
+}
+const muteAudio = () =>{
+    document.getElementById('btn-audio-off').style.display="none";
+    document.getElementById('btn-audio-on').style.display="block";
+}
+
+const videoBtn = () =>{
+    const enabled = myvideostream.getVideoTracks()[0].enabled;
+    if(enabled){
+        myvideostream.getVideoTracks()[0].enabled = false;
+        unmutevideo();
+    }
+    else{
+        mutevideo();
+        myvideostream.getVideoTracks()[0].enabled = true;
+    }
+}
+
+const unmutevideo = () =>{
+    document.getElementById('btn-video-off').style.display="block";
+    document.getElementById('btn-video-on').style.display="none";
+}
+const mutevideo = () =>{
+    document.getElementById('btn-video-off').style.display="none";
+    document.getElementById('btn-video-on').style.display="block";
 }

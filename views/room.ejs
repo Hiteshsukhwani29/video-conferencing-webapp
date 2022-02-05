@@ -30,8 +30,8 @@
             <div class="control-box">
                 <div class="control-container">
 
-                    <div class="control-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                    <div class="control-button" onclick="AudioBtn()">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="btn-audio-on" x="0px" y="0px" width="24" height="24"
                             viewBox="0 0 172 172" style=" fill:#000000;">
                             <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
                                 stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
@@ -45,10 +45,26 @@
                                 </g>
                             </g>
                         </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" id="btn-audio-off" x="0px" y="0px" width="24"
+                            height="24" viewBox="0 0 172 172" style=" fill:#000000;" style="display: none;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#f6f6f6">
+                                    <path
+                                        d="M86,7.16667c-17.77333,0 -32.25,14.47667 -32.25,32.25v53.75c0,15.33667 10.74916,28.19831 25.11833,31.45915c0.01796,-1.85013 0.1534,-3.67941 0.39193,-5.47998c0.20234,-1.52742 0.51778,-3.01941 0.86084,-4.49316c3.48153,-14.75602 14.00192,-26.79786 27.81283,-32.38998c1.42402,-0.58216 2.88101,-1.08964 4.36719,-1.52572c0.19323,-0.05644 0.37964,-0.12798 0.57389,-0.18197c1.7506,-0.48911 3.53908,-0.88553 5.375,-1.18278v-39.95557c0,-17.77333 -14.47667,-32.25 -32.25,-32.25zM37.625,75.25c-2.97417,0 -5.375,2.40083 -5.375,5.375v12.54167c0,27.80667 21.24917,50.77555 48.375,53.46305v16.41195c0,2.97417 2.40083,5.375 5.375,5.375c2.97417,0 5.375,-2.40083 5.375,-5.375v-5.84391c-2.86667,-3.08167 -5.33581,-6.55358 -7.30664,-10.31608c-0.60917,-1.1825 -1.17606,-2.38152 -1.68669,-3.60433c-0.51063,-1.22281 -0.97058,-2.47222 -1.36474,-3.7443c-0.39417,-1.25417 -0.74914,-2.5033 -1.03581,-3.7933c-20.855,-2.9025 -36.98112,-20.89391 -36.98112,-42.57308v-12.54167c0,-2.97417 -2.40083,-5.375 -5.375,-5.375zM125.41667,86c-21.73292,0 -39.41667,17.68375 -39.41667,39.41667c0,21.73292 17.68375,39.41667 39.41667,39.41667c21.73292,0 39.41667,-17.68375 39.41667,-39.41667c0,-21.73292 -17.68375,-39.41667 -39.41667,-39.41667zM125.41667,96.75c5.96625,0 11.50317,1.83724 16.09701,4.96908l-39.7946,39.7946c-3.13183,-4.59384 -4.96908,-10.13076 -4.96908,-16.09701c0,-0.98788 0.04892,-1.96301 0.14697,-2.92545c1.47079,-14.43672 13.70149,-25.74121 28.51969,-25.74121zM149.11426,109.31966c3.13183,4.59384 4.96908,10.13076 4.96908,16.09701c0,15.80608 -12.86058,28.66667 -28.66667,28.66667c-5.96625,0 -11.50317,-1.83724 -16.09701,-4.96908z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+
                     </div>
 
-                    <div class="control-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                    <div class="control-button" onclick="videoBtn()">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="btn-video-on" x="0px" y="0px" width="24" height="24"
                             viewBox="0 0 172 172" style=" fill:#000000;">
                             <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
                                 stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
@@ -62,6 +78,22 @@
                                 </g>
                             </g>
                         </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" id="btn-video-off" style="display:none;" x="0px" y="0px" width="24" height="24"
+                            viewBox="0 0 172 172" style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#cccccc">
+                                    <path
+                                        d="M9.78698,1.67969l-8.10729,8.10729l160.53333,160.53333l8.10729,-8.10729l-49.92031,-49.92031v-66.42604c0,-6.33533 -5.13133,-11.46667 -11.46667,-11.46667h-66.42604zM10.66042,34.47839c-5.9512,0.41853 -10.66042,5.32815 -10.66042,11.38828v80.26667c0,6.33533 5.13133,11.46667 11.46667,11.46667h97.46667c1.43907,0 2.80898,-0.30226 4.07604,-0.78386zM166.26667,45.86667c-1.49315,0.00002 -2.92738,0.58255 -3.99766,1.6237l-30.40234,27.04297v11.46667v11.46667l30.61511,27.23333c1.04544,0.922 2.39097,1.43155 3.78489,1.43333c3.16643,0 5.73333,-2.5669 5.73333,-5.73333v-34.4v-34.4c0,-3.16643 -2.5669,-5.73333 -5.73333,-5.73333z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+
                     </div>
 
                     <div class="control-button">
