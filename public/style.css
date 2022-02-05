@@ -1,3 +1,7 @@
+body{
+    margin:0;
+}
+
 #video-grid {
     display: flex;
     justify-content: center;
@@ -17,7 +21,7 @@ video {
 .meet-box {
     display: flex;
     flex-grow: 1;
-    background-color: darkgrey;
+    background-color: #202124;
     justify-content: center;
     align-items: center;
 }
@@ -30,4 +34,28 @@ video {
 
 .chatbox {
     flex: 0.3;
+}
+
+.control-box{
+    background-color: #202124;
+    padding: 20px;
+}
+
+.control-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-button{
+    background-color: #3c4043;
+    padding: 5px;
+    border-radius: 30px;
+    width: 34px;
+    height: 34px;
+}
+
+.control-button > svg{
+    margin-top: 5px;
+    margin-left: 5px;
 }
