@@ -11,7 +11,8 @@
     </script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -27,6 +28,7 @@
 
             <div class="control-box">
                 <div class="control-container">
+
                     <div class="control-button">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
                             viewBox="0 0 172 172" style=" fill:#000000;">
@@ -43,12 +45,109 @@
                             </g>
                         </svg>
                     </div>
+
+                    <div class="control-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                            viewBox="0 0 172 172" style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#f6f6f6">
+                                    <path
+                                        d="M11.46667,34.4c-6.33533,0 -11.46667,5.13133 -11.46667,11.46667v80.26667c0,6.33533 5.13133,11.46667 11.46667,11.46667h97.46667c6.33533,0 11.46667,-5.13133 11.46667,-11.46667v-80.26667c0,-6.33533 -5.13133,-11.46667 -11.46667,-11.46667zM166.26667,45.86667c-1.49315,0.00002 -2.92738,0.58255 -3.99766,1.6237l-30.40234,27.04297v11.46667v11.46667l30.52552,27.15495l0.08958,0.07839c1.04544,0.922 2.39097,1.43155 3.78489,1.43333c3.16643,0 5.73333,-2.5669 5.73333,-5.73333v-34.4v-34.4c0,-3.16643 -2.5669,-5.73333 -5.73333,-5.73333z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="control-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                            viewBox="0 0 172 172" style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#f6f6f6">
+                                    <path
+                                        d="M10.75,32.25v96.24609h150.5v-96.24609zM21.5,43h129v74.74609h-129zM64.5,53.75c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,14.78125 12.09375,26.875 26.875,26.875c6.42481,0 12.24072,-2.37256 16.79688,-6.04687l-6.71875,-8.39844c-2.83447,2.28857 -6.27783,3.69531 -10.07812,3.69531c-8.96533,0 -16.125,-7.15967 -16.125,-16.125c0,-8.96533 7.15967,-16.125 16.125,-16.125c3.80029,0 7.24365,1.40674 10.07813,3.69531l6.71875,-8.39844c-4.55615,-3.67432 -10.37207,-6.04687 -16.79687,-6.04687zM118.25,53.75c-14.78125,0 -26.875,12.09375 -26.875,26.875c0,14.78125 12.09375,26.875 26.875,26.875c6.42481,0 12.24072,-2.37256 16.79688,-6.04687l-6.71875,-8.39844c-2.83447,2.28857 -6.27783,3.69531 -10.07812,3.69531c-8.96533,0 -16.125,-7.15967 -16.125,-16.125c0,-8.96533 7.15967,-16.125 16.125,-16.125c3.80029,0 7.24365,1.40674 10.07813,3.69531l6.71875,-8.39844c-4.55615,-3.67432 -10.37207,-6.04687 -16.79687,-6.04687z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="control-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                            viewBox="0 0 172 172" style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#f6f6f6">
+                                    <path
+                                        d="M86,10.75c-7.43261,0 -13.60547,5.20703 -15.45312,12.09375c-1.88965,-0.77685 -3.88428,-1.34375 -6.04687,-1.34375c-8.83935,0 -16.125,7.28565 -16.125,16.125v57.78125l-4.70312,-4.70312c-6.25683,-6.25683 -16.58691,-6.25683 -22.84375,0c-6.25683,6.25684 -6.25683,16.58692 0,22.84375l36.44922,36.44922c6.31982,6.29883 15.0542,11.25391 25.36328,11.25391h24.85938c20.72315,0 37.625,-16.90185 37.625,-37.625v-64.5c0,-8.83935 -7.28565,-16.125 -16.125,-16.125c-1.88965,0 -3.67432,0.39893 -5.375,1.00781v-6.38281c0,-8.83935 -7.28565,-16.125 -16.125,-16.125c-2.1626,0 -4.15722,0.5669 -6.04687,1.34375c-1.84766,-6.88672 -8.02051,-12.09375 -15.45312,-12.09375zM86,21.5c3.04443,0 5.375,2.33057 5.375,5.375v53.75h10.75v-43c0,-3.04443 2.33057,-5.375 5.375,-5.375c3.04443,0 5.375,2.33057 5.375,5.375v43h10.75v-21.5c0,-3.04443 2.33057,-5.375 5.375,-5.375c3.04443,0 5.375,2.33057 5.375,5.375v64.5c0,14.90723 -11.96777,26.875 -26.875,26.875h-24.85937c-6.84472,0 -12.72363,-3.33838 -17.63672,-8.23047l-36.61719,-36.28125c-2.1416,-2.1416 -2.1416,-5.58496 0,-7.72656c2.1416,-2.1416 5.58496,-2.1416 7.72656,0l13.77344,13.94141l9.23828,9.23828v-83.81641c0,-3.04443 2.33057,-5.375 5.375,-5.375c3.04443,0 5.375,2.33057 5.375,5.375v43h10.75v-53.75c0,-3.04443 2.33057,-5.375 5.375,-5.375z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="control-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                            viewBox="0 0 172 172" style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#f6f6f6">
+                                    <path
+                                        d="M35.83333,21.5c-7.83362,0 -14.33333,6.49972 -14.33333,14.33333v100.33333c0,7.83362 6.49972,14.33333 14.33333,14.33333h100.33333c7.83362,0 14.33333,-6.49972 14.33333,-14.33333v-100.33333c0,-7.83362 -6.49972,-14.33333 -14.33333,-14.33333zM35.83333,35.83333h100.33333v100.33333h-100.33333zM86,50.16667l-35.83333,35.83333h28.66667v35.83333h14.33333v-35.83333h28.66667z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="control-button-leave">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                            viewBox="0 0 172 172" style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#f6f6f6">
+                                    <path
+                                        d="M148.3444,106.77214c-0.69987,0.72786 -0.69987,0.72786 -1.42774,0.72786c-0.72786,0 -3.58333,0 -5.01107,-1.42774c-1.42773,-0.72786 -3.58333,-2.88346 -5.73893,-4.31119c-2.1556,-1.42774 -9.32226,-6.43881 -13.60547,-8.5944c-4.3112,-2.1556 -6.4668,-2.85547 -7.16667,-6.4388c-0.72787,-3.58333 -0.72787,-20.80013 -0.72787,-20.80013c0,0 -7.16667,-1.42774 -12.9056,-2.1556c-5.73893,-0.69988 -13.60547,-1.42774 -22.19987,-0.69988c-8.6224,0.69988 -16.48894,1.42774 -24.38347,4.28321c0,10.05012 0,18.64453 0,20.80012c0,2.1556 0,2.85547 -2.85547,4.28321c-2.88346,1.45573 -7.89453,3.58333 -11.47786,6.46679c-3.58333,2.85547 -7.86653,5.73894 -10.02214,7.86654c-2.88346,1.45573 -2.88346,0.72786 -4.31119,0.72786c-1.42774,0 -3.58333,-0.72786 -4.2832,-1.42774c-0.72787,0 -1.45573,-1.42773 -6.4668,-6.46679c-4.2832,-4.28321 -10.75,-10.75 -12.17774,-12.17774c-1.42774,-1.42774 -1.42774,-1.42774 -2.1556,-2.85547l-1.42774,-2.88346c0,-0.69988 0.72787,-3.58333 2.1556,-5.01107c1.42774,-1.42774 6.43881,-5.73893 10.02214,-8.5944c3.58333,-2.85547 14.33333,-9.32226 18.64453,-11.47786c4.28321,-2.1276 18.61654,-9.29427 39.41667,-12.17774c21.5,-2.85547 42.27214,0.72786 56.60547,5.01107c14.33333,5.03906 27.9668,13.63346 34.4056,17.91667c6.43881,4.31119 8.5944,6.46679 9.32226,8.6224c1.42774,2.1276 0.69988,4.2832 0.69988,5.71094c-0.69988,1.45573 -1.42774,2.88346 -2.85547,4.31119c-1.42774,1.42774 -5.01107,5.01107 -10.02213,10.02214c-4.3112,5.03906 -10.05013,10.75 -10.05013,10.75z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+
                 </div>
             </div>
         </div>
         <div class="chatbox">
-            <div class="chat-header">
-                Chat
+            <div class="chatbox-inner">
+                <div class="chat-header">
+                    Chat
+                </div>
+
+                <div class="input-group mb-3 p-2" style="margin-top: 125%;">
+                    <input type="text" style="border: none; background-color: #f6f6f6;" class="form-control" placeholder="Type here..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-sm btn-outline-primary rounded" type="button" id="button-addon2">send</button>
+                  </div>
+
+            </div>
+            <div class="chatbox-button">
+
             </div>
         </div>
 
