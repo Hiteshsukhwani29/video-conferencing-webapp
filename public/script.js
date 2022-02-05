@@ -4,6 +4,9 @@ const myvideo = document.createElement('video');
 const videogrid = document.getElementById('video-grid');
 myvideo.muted = true;
 
+var userName=prompt("Please enter your name");
+
+
 var peer = new Peer(undefined, {
     path: '/peerjs',
     host: '/',
@@ -55,4 +58,25 @@ const addvideostream = (video, stream) => {
         video.play();
     })
     videogrid.append(video);
+}
+
+let text = $('input');
+console.log(text);
+
+$('html').keydown((e) => {
+    if (e.which == 13 && text.val().length != 0) {
+        socket.emit('message', text.val(), userName);
+        console.log(text.val());
+        text.val('');
+    }
+})
+
+
+socket.on('createmsg', (m, un) => {
+    $('ul').append(`<li><h6>${un}</h6><br>${m}</li>`);
+    scrolltobottom();
+})
+
+const scrolltobottom = () =>{
+    $('.chat-main').scrollTop($('.chat-main').prop("scrollHeight"));
 }

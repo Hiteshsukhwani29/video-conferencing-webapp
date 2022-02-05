@@ -39,6 +39,8 @@ video {
 }
 
 .chatbox-inner{
+    display: flex;
+    flex-direction: column;
     height: 90%;
     border-radius: 10px;
     background-color: #f6f6f6;
@@ -46,6 +48,7 @@ video {
 }
 
 .chat-header{
+    flex: 0.05;
     font-family:serif;
     font-weight: 800;
     font-size: 20px;
@@ -69,10 +72,8 @@ video {
 
 .control-button{
     background-color: #3c4043;
-    padding: 5px;
+    padding: 10px;
     border-radius: 30px;
-    width: 34px;
-    height: 34px;
     margin: 5px;
 }
 
@@ -83,23 +84,28 @@ video {
     padding-right: 30px;
     padding-left: 30px;
     border-radius: 30px;
-    width: 24px;
-    height: 24px;
     margin: 5px 5px 5px 15px;
 }
 
 .control-button > svg{
-    margin-top: 5px;
-    margin-left: 5px;
 }
 
 .chat-input{
-    margin-top: 130%;
-    margin-left: 10px;
+    flex:0.05;
 }
 
-.chat-input > input{
-    background-color: #f6f6f6;
-    border: none;
-    font-size: 16px;
+li{
+    line-height: 2px;
+    margin-top: 8px;
+}
+
+.chat-main{
+    flex: 0.9;
+    overflow-y: scroll;
+}
+
+ul{
+    text-decoration: none;
+    list-style: none;
+    margin-top: 5px !important;
 }
